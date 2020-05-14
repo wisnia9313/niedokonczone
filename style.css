@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    z-index: 222;
+}
+
+nav a.logo {
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 12vh;
+    padding: 0 5%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+div.toggle {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+div.toggle::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+div.toggle::after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10vh;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    transition: .5s;
+    background-color: #fff;
+}
+
+ul.active {
+    left: 0;
+}
+
+nav ul li {
+    display: flex;
+    font-size: 30px;
+    list-style: none;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    /* flex-grow: 1; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    display: block;
+
+}
+
+
+
+/* header - writing */
+header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30vh;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    text-align: center;
+    font-size: 16px;
+    z-index: -1;
+}
+
+.writing {
+    position: relative;
+    color: red;
+}
+
+.writing::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border-right: 2px solid black;
+    animation: flashing .6s infinite ease;
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+section {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* background-color: #000; */
+}
+
+section h1 {
+    color: rgb(117, 114, 114);
+    font-size: 40px;
+    padding: 5%;
+    margin-left: 4%;
+}
+
+section div.about-container {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 30px 15px;
+    background-color: #fff;
+    z-index: 1;
+    opacity: .6;
+    text-align: justify;
+    line-height: 200%;
+}
